@@ -1,34 +1,57 @@
 package pk.cui.sc.labfinal;
 
+import java.util.ArrayList;
+
 public class HTMLParentElement extends HTMLTag{
 	
 	private String tagName;
 	private String startTag;
 	private String endTag;
-	private String tagBody;
 	
+	private ArrayList<HTMLTag> childrenTag;
+	
+	public HTMLParentElement(String s) {
+		this.tagName = s;
+	}
 	@Override
 	public String getTagName() {
 		// TODO Auto-generated method stub
-		return null;
+		return tagName;
+	}
+	@Override
+	public void setStartTag(String startTag) {
+		this.startTag = startTag;
+	}
+	@Override
+	public void setEndTag(String endTag) {
+		this.endTag = endTag;
+	}
+	@Override
+	public void generateHtml() {
+		// TODO Auto-generated method stub
+		System.out.println(startTag);		
+		for (HTMLTag tag : childrenTag) {
+            tag.generateHtml();
+		}
+		System.out.println(endTag);	
 	}
 
-	@Override
-	public void setStartTag() {
-		// TODO Auto-generated method stub
-		
-	}
+    public void addChildTag(HTMLTag tag) {
+        childrenTag.add(tag);
+    }
 
-	@Override
-	public void setEndTag() {
-		// TODO Auto-generated method stub
-		
-	}
 
-	@Override
-	public void generateHTML() {
-		// TODO Auto-generated method stub
-		
-	}
+    public void removeChildTag(HTMLTag tag) {
+        childrenTag.remove(tag);
+    }
+
+
+    public ArrayList<HTMLTag> getChildren() {
+        return childrenTag;
+    }
+	
+	
+	
+	
 
 }

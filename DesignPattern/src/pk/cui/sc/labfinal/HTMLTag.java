@@ -1,6 +1,5 @@
 package pk.cui.sc.labfinal;
 
-import java.awt.List;
 import java.util.ArrayList;
 
 public abstract class HTMLTag {
@@ -8,24 +7,22 @@ public abstract class HTMLTag {
 		
 	}
 	public abstract String getTagName();
-	public abstract void setStartTag();
-	public abstract void setEndTag();
-	public void setTagBody(String s) {
-	
+	public abstract void setStartTag(String tag);
+	public abstract void setEndTag(String tag);
+	public void setTagBody(String tag) {
+		throw new UnsupportedOperationException("Unsupported Operation Exception");
 	}
-	
-	public void addChildTag(String s) {
-		
+	public void addChildTag(HTMLTag tag) {
+		throw new UnsupportedOperationException("Unsupported Operation Exception");
 	}
-	
-	public void removeChildTag(HTMLTag h) {
-		
+	public void removeChildTag(HTMLTag tag) {
+		throw new UnsupportedOperationException("Unsupported Operation Exception");
 	}
-	
 	public ArrayList<HTMLTag> getChildren(){
-		
-		return null;
+
+		throw new UnsupportedOperationException("Unsupported Operation Exception");
 	}
 	
-	public abstract void generateHTML();
+	public abstract void generateHtml();
+	
 }
