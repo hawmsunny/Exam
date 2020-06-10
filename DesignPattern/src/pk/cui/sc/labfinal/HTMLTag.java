@@ -1,6 +1,6 @@
 package pk.cui.sc.labfinal;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public abstract class HTMLTag {
 	public HTMLTag(){
@@ -18,7 +18,7 @@ public abstract class HTMLTag {
 	public void removeChildTag(HTMLTag tag) {
 		throw new UnsupportedOperationException("Unsupported Operation Exception");
 	}
-	public ArrayList<HTMLTag> getChildren(){
+	public List<HTMLTag> getChildren(){
 
 		throw new UnsupportedOperationException("Unsupported Operation Exception");
 	}

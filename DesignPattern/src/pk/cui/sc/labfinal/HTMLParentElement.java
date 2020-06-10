@@ -1,17 +1,18 @@
 package pk.cui.sc.labfinal;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class HTMLParentElement extends HTMLTag{
 	
 	private String tagName;
 	private String startTag;
 	private String endTag;
-	
-	private ArrayList<HTMLTag> childrenTag;
+	private List<HTMLTag> childrenTag;
 	
 	public HTMLParentElement(String s) {
 		this.tagName = s;
+		this.childrenTag = new ArrayList<HTMLTag>();
 	}
 	@Override
 	public String getTagName() {
@@ -46,7 +47,7 @@ public class HTMLParentElement extends HTMLTag{
     }
 
 
-    public ArrayList<HTMLTag> getChildren() {
+    public List<HTMLTag> getChildren() {
         return childrenTag;
     }
 	
